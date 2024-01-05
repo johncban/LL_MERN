@@ -16,15 +16,24 @@
     <div id="root"></div>
 
     <script type="text/javascript">
-      let heading = React.createElement(
-        "h1",
-        null,
-        "Getting Started with React"
-      );
-
+      /* 
+      let ul =  React.createElement(
+          "ul", 
+          { style: { color: "blue" } }, 
+          //"Getting Started with React!!"
+          React.createElement("li", null, "save"),
+          React.createElement("li", null, "me"),
+          React.createElement("li", null, "JSX")
+        );
+      */
+        
       ReactDOM.render(
-        heading,
-        document.getElementById("root")
+        <ul>
+          <li>🤖</li>
+          <li>💻</li>
+          <li>🛜</li>
+        </ul>,
+       document.getElementById("root")
       );
     </script>
   </body>
