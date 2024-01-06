@@ -29,7 +29,7 @@
           <section>
             <img
               height={200}
-              src="./restaurant.jpeg"
+              src="./restaurant.jpg"
               alt="A server presents two plates at a fancy restaurant"
             />
             <ul>
@@ -66,8 +66,8 @@
 
       function App() {
         return (
-          <div>
-            <Header name="Cindy" />
+          <React.Fragment>
+            <Header name="Jc" />
             <Main
               adjective="amazing"
               dishes={dishObjects}
@@ -75,7 +75,7 @@
             <Footer
               year={new Date().getFullYear()}
             />
-          </div>
+          </React.Fragment>
         );
       }
 
