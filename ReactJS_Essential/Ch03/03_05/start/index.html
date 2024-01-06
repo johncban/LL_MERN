@@ -27,6 +27,10 @@
       function Main(props) {
         return (
           <section>
+            <img height={200} 
+              src="./restaurant.jpg"
+              alt="A Restaurant with 2 tables and plates."
+            />
             <ul>
               {props.dishes.map((dish) => (
                 <li key={dish.id}>
@@ -62,7 +66,7 @@
       function App() {
         return (
           <div>
-            <Header name="Cindy" />
+            <Header name="Jc" />
             <Main
               adjective="amazing"
               dishes={dishObjects}
