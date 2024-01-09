@@ -1,6 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 
+// https://react.dev/reference/react/useState
+
 function App() {
   const [title, setTitle] = useState("");
   const [color, setColor] = useState("#000000");
