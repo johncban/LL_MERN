@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function useInput(initialValue) {
   const [value, setValue] =
@@ -14,6 +14,18 @@ function useInput(initialValue) {
 }
 
 function App() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/johncban`)
+    .then((response) => response.json())
+    .then(setData);
+  }, []);
+  if (data)
+    return (<pre>{JSON.stringify(data, null, 2)}</pre>);
+
+
+  /***
   const [titleProps, resetTitle] = useInput("");
   const [colorProps, resetColor] =
     useState("#000000");
@@ -25,7 +37,10 @@ function App() {
     resetTitle();
     resetColor();
   };
-  return (
+  ***/
+  return <h1>Data</h1>;
+  
+  /** (
     <form onSubmit={submit}>
       <input
         {...titleProps}
@@ -35,7 +50,7 @@ function App() {
       <input {...colorProps} type="color" />
       <button>ADD</button>
     </form>
-  );
+  ); **/
 }
 
 export default App;
